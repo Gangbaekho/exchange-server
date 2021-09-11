@@ -62,7 +62,7 @@ public class ExchangeServiceImpl implements ExchangeService{
         return responseDto;
     }
 
-    private String doubleMoneyToStringMoney(double money){
+    public String doubleMoneyToStringMoney(double money){
 
         Double flooredMoney =  Math.floor(money* 100) / 100;
         String moneyString = String.format("%.2f", flooredMoney);
