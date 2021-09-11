@@ -33,7 +33,6 @@ public class ExchangeServiceImpl implements ExchangeService{
         Map<String,Object> quotes = (Map<String,Object>) response.get("quotes");
 
         Double currencyRate = (Double) quotes.get(requestDto.getCurrency().getQuote());
-        String formattedCurrencyRate = doubleMoneyToStringMoney(currencyRate);
 
         Double exchange =  requestDto.getAmountOfMoney() * currencyRate ;
         String formattedExchangedMoney = doubleMoneyToStringMoney(exchange);
