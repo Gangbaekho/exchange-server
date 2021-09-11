@@ -7,14 +7,12 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class ExchangeUSDMoneyRequestDto {
+public class CurrencyRateRequestDto {
 
     private Currency currency;
-    private int amountOfUDSMoney;
 
     @Builder
-    public ExchangeUSDMoneyRequestDto(Currency currency, int amountOfUDSMoney) {
+    public CurrencyRateRequestDto(Currency currency) {
         this.currency = currency;
-        this.amountOfUDSMoney = amountOfUDSMoney;
     }
 }
